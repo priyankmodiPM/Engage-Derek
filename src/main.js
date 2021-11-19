@@ -1,11 +1,21 @@
 import Vue from 'vue'
-import App from './App.vue'
-import './registerServiceWorker'
-import router from './router'
+import Vuetify from 'vuetify';
 
-Vue.config.productionTip = false
+import App from './App';
+import router from './router';
+import store from './store';
+import './auth';
 
+import('vuetify/dist/vuetify.css');
+
+Vue.use(Vuetify);
+
+/* eslint-disable no-new */
 new Vue({
+  el: '#app',
   router,
-  render: h => h(App)
-}).$mount('#app')
+  store,
+  template: '<App/>',
+  components: { App },
+  vuetify: new Vuetify(),
+});
