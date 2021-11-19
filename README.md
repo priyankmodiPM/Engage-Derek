@@ -1,4 +1,3 @@
-# derek
 
 ## Project setup
 ```
