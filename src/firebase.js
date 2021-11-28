@@ -12,5 +12,5 @@ const firebaseApp = firebase.initializeApp({
 });
 // console.log("firebaseApp",firebaseApp);
 // console.log("firebaseApp-auth",firebaseApp.auth());
-const auth2 = firebaseApp.auth();
-export default auth2;
+const firebaseObj = firebaseApp;
+export default firebaseObj;

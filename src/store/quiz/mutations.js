@@ -9,3 +9,7 @@ export const UPDATE_QUESTION = "UPDATE_QUESTION";
 export const ADD_QUESTION = "ADD_QUESTION";
 
 export const RESET_QUIZ = "RESET_NEW_QUIZ";
+
+export const PUSH_QUIZ = "PUSH_QUIZ";
+export const RESET_QUIZ_LIST = "export const";
+export const SET_QUIZ = "SET_QUIZ";

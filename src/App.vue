@@ -7,6 +7,16 @@
       :loggedIn="loggedIn"
     />
     <v-main>
+      <v-card v-show="!loggedIn">
+        <div class="d-flex flex-column justify-space-between align-center">
+          <v-img
+            src="../public/img/empty-state-generic.png"
+          ></v-img>
+          <h2 class="d-flex flex-column justify-space-between align-center">
+            Oops. You need to login to begin attempting and creating quizzes.
+          </h2>
+        </div>
+      </v-card>
       <v-container fluid>
         <router-view></router-view>
       </v-container>
@@ -24,7 +34,8 @@
     computed: {
       ...mapGetters('user', {
         profile: 'profile',
-        loggedIn: 'loggedIn'
+        loggedIn: 'loggedIn',
+        role: 'role'
       })
     },
     methods: {

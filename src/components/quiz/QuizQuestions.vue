@@ -1,5 +1,6 @@
 <template>
   <v-container>
+    <div class="wrapper">
     <v-layout wrap>
       <v-flex xs12>
       <v-expansion-panels>
@@ -42,12 +43,18 @@
                   >
                     <v-flex xs10>
                       <v-checkbox
-                        class="check_box"
                         label="Right Answer"
                         :input-value="answer.isRight"
                         hide-details
                         @change="updateAnswerState($event, questionIndex, answerIndex)"
                       ></v-checkbox>
+                      <!-- <input
+                        type="checkbox"
+                        label="Right Answer"
+                        :checked="checked"
+                        v-bind:input-value="answer.isRight"
+                        @input="checked = updateAnswerState($event, questionIndex, answerIndex)"
+                      > -->
                       <v-text-field
                         label="Answer"
                         :value="answer.answer"
@@ -90,15 +97,37 @@
       </v-expansion-panels>
       </v-flex>
     </v-layout>
+    </div>
   </v-container>
 </template>
 
-<style scoped>
-  .check_box {
+<style>
+  .wrapper * {
+      color: blue;
+  }
+  .check_box > *{
     background-color: chartreuse;
     color: black;
     border: 2px;
     opacity: 100;
+  }
+  
+  .v-input__slot {
+    opacity: 100;
+  }
+
+  .v-input--selection-controls__input input:checked ~ .checkmark{
+    opacity: 100;
+  }
+
+  .v-input--selection-controls > input {
+    opacity: 100;
+    background-color: aqua;
+  }
+  .v-input--selection-controls__input > * {
+    opacity: 100;
+    /* background-color: aqua; */
+
   }
 </style>
 <script>

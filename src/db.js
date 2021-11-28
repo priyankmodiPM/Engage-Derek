@@ -1,5 +1,5 @@
-import firebase from './firebase';
+import firebaseObj from './firebase';
 
-const db = firebase.firestore();
+const db = firebaseObj.firestore();
 
 export default db;

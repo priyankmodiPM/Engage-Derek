@@ -1,0 +1,8 @@
+.v-input--selection-controls__input input[role=checkbox], .v-input--selection-controls__input input[role=radio], .v-input--selection-controls__input input[role=switch] {
+    opacity: 100;
+}
+
+.v-input--selection-controls__input input[role=radio] {
+    opacity: 100;
+    background-color: aqua;
+}
